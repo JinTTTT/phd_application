@@ -1,0 +1,52 @@
+% Adapted from "Plantilla para Cartas" by Fausto Mauricio Lagos Suarez.
+% Source: https://www.overleaf.com/latex/templates/plantilla-para-cartas/myxtzxtsmsdy
+% Original template copyright 2006--2013 Xavier Danaux.
+% Original source distributed under the LaTeX Project Public License v1.3c.
+% Overleaf lists the template under Creative Commons Attribution 4.0.
+% Changes: English language, personal and recipient details, no photo,
+% and an original cover-letter draft for the MOTOR Ai application.
+% Select cover_letter.tex as the Main document in Overleaf to compile.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[scale=0.75]{geometry}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+\name{Jin}{Tao}
+\address{Elsterstr.\ 1}{14513 Teltow}{Germany}
+\email{j.tao@campus.tu-berlin.de}
+\homepage{github.com/JinTTTT}
+
+\begin{document}
+
+\recipient{MOTOR Ai Hiring Team}{Scheringstra\ss e 1\\13355 Berlin, Germany}
+\date{\today}
+\opening{Dear Hiring Team,}
+\closing{Kind regards,}
+\makelettertitle
+
+\textbf{Application for Motion Planning Engineer (m/f/d)}
+
+\justifying
+\setlength{\parindent}{0pt}
+
+I am applying for the Motion Planning Engineer position at MOTOR Ai. I hold a master's degree in Vehicle Engineering from TU Berlin and want to focus my career on autonomous driving. Your work toward deploying Level 4 autonomous systems closely matches my interest in developing planning and control algorithms and integrating them into working systems.
+
+Since June 2026, I have been independently developing \textbf{TaoRobot: Autonomous Driving Full Stack}, an ongoing open-source personal project. I implement the core algorithms from scratch in lightweight ROS 2 nodes: pose-graph SLAM, particle-filter localization, A* planning with path smoothing, and pure pursuit trajectory tracking. Integrating these components in Gazebo gives me direct experience with the interfaces between state estimation, planning, and control. This project reflects my initiative to understand and implement an autonomy stack at the algorithm level. The source code and demo are available at \href{https://github.com/JinTTTT/taorobot}{github.com/JinTTTT/taorobot}.
+
+At FaSTTUBe, TU Berlin's Formula Student team, I implemented MPC in C++ using the FORCESPRO solver, with a minimum-lap-time objective and constraints on track boundaries and vehicle dynamics. I developed ROS 2 trajectory tracking using pure pursuit and MPC and tested the system in Live for Speed, gaining practical experience in optimization-based vehicle control.
+
+For my Vehicle Engineering master's thesis, I deployed a pedestrian-following system on a real autonomous shuttle, combining A* planning, high-level pure pursuit, and low-level cascaded PID control. I also integrated YOLO-based gesture detection for stopping, resuming driving, and adjusting following distance. I currently work full-time at ZEKI on mobile-robot navigation and autonomous exploration.
+
+I am available to start on December 1, 2026. Only the thesis remains in my second master's degree, in Computational Engineering Science; I complete it outside working hours for personal interest, and it will not affect my full-time availability. I would welcome the opportunity to discuss how my experience could contribute to MOTOR Ai.
+
+\makeletterclosing
+
+\end{document}
