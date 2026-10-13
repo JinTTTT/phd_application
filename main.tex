@@ -18,6 +18,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{microtype}
 % pdfLaTeX Unicode mappings; XeLaTeX handles Unicode directly.
 \ifdefined\pdfglyphtounicode
   \input{glyphtounicode}
@@ -101,7 +103,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.15in]\justifying}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -190,6 +192,14 @@
 %-----------ACHIEVEMENTS AND PROJECTS-----------
 \section{Achievements and Projects}
     \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{TaoRobot: Autonomous Driving Full Stack}}{June 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Open-Source Personal Project $|$ \href{https://github.com/JinTTTT/taorobot}{github.com/JinTTTT/taorobot}; demo available in the GitHub repository.}
+            \resumeItem{Independently developing a lightweight autonomous-driving stack from scratch in ROS 2, with custom SLAM, localization, planning, and control algorithms implemented as modular nodes.}
+            \resumeItem{Implemented pose-graph SLAM, particle-filter localization, A* path planning with path smoothing, and pure pursuit trajectory tracking; integrated the stack in Gazebo simulation.}
+          \resumeItemListEnd
+
       \resumeProjectHeading
           {\textbf{Magnetic Joint-State Estimation}}{Mar. 2026 -- Sep. 2026}
           \resumeItemListStart

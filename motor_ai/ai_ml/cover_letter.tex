@@ -1,0 +1,54 @@
+% Adapted from "Plantilla para Cartas" by Fausto Mauricio Lagos Suarez.
+% Source: https://www.overleaf.com/latex/templates/plantilla-para-cartas/myxtzxtsmsdy
+% Original template copyright 2006--2013 Xavier Danaux.
+% Original source distributed under the LaTeX Project Public License v1.3c.
+% Overleaf lists the template under Creative Commons Attribution 4.0.
+% Changes: English language, personal and recipient details, no photo,
+% and an original cover-letter draft for the MOTOR Ai application.
+% Select cover_letter.tex as the Main document in Overleaf to compile.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[scale=0.75]{geometry}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+\name{Jin}{Tao}
+\address{Elsterstr.\ 1}{14513 Teltow}{Germany}
+\email{j.tao@campus.tu-berlin.de}
+\homepage{github.com/JinTTTT}
+
+\begin{document}
+
+\recipient{MOTOR Ai Hiring Team}{Scheringstra\ss e 1\\13355 Berlin, Germany}
+\date{\today}
+\opening{Dear Hiring Team,}
+\closing{Kind regards,}
+\makelettertitle
+
+\textbf{Application for AI/ML Engineer (m/f/d) Autonomous Systems}
+
+\justifying
+\setlength{\parindent}{0pt}
+
+I am applying for the AI/ML Engineer position in Autonomous Systems at MOTOR Ai. I hold a master's degree in Vehicle Engineering from TU Berlin and currently work full-time at ZEKI. I want to bring my experience in model development, evaluation, and robotics integration to autonomous driving, contributing to your work toward deploying Level 4 systems.
+
+In a visuo-tactile sensor-fusion project, I developed training and evaluation infrastructure for estimating in-hand object pose from RGB images and tactile measurements. I implemented and compared ten existing methods, then developed a transformer-based fusion model that matched the best evaluated baseline's pose-estimation accuracy. This work gave me experience translating published methods into working implementations and comparing models systematically. My technical toolkit includes Python, PyTorch, and TensorFlow.
+
+At ZEKI, I developed a TurtleBot4 platform integrating SLAM, navigation, semantic mapping, and vision-language models. I also developed a Qwen-based agent that connects natural-language requests to navigation, exploration, and visual question answering. I am now developing a vision-language-action navigation policy integrated with Nav2, strengthening my experience connecting AI components to robot execution.
+
+Alongside this work, I independently develop \textbf{TaoRobot: Autonomous Driving Full Stack}, an ongoing open-source personal project started in June 2026. I implement pose-graph SLAM, particle-filter localization, A* planning, and pure pursuit from scratch in lightweight ROS 2 nodes and integrate them in Gazebo. This gives me practical understanding of the autonomy stack into which learned models must fit. The code and demo are available at \href{https://github.com/JinTTTT/taorobot}{github.com/JinTTTT/taorobot}.
+
+My deployment experience also includes YOLO-based gesture detection on a real autonomous shuttle and GPU-accelerated visual SLAM on NVIDIA Jetson Xavier. These projects connect my AI work with vehicle behavior and constrained onboard computing.
+
+I am available to start on December 1, 2026. Only the thesis remains in my second master's degree in Computational Engineering Science; I complete it outside working hours, and it will not affect my full-time availability. I would welcome the opportunity to discuss my contribution to your team.
+
+\makeletterclosing
+
+\end{document}
