@@ -132,6 +132,9 @@
     \resumeSubheading
       {Technische Universit\"at Berlin}{Berlin, Germany}
       {M.Sc. in Computational Engineering Science; GPA: 1.3 (1.0 best)}{Feb. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Thesis and one 6-credit course remaining; to be completed in personal time alongside full-time work.}
+      \resumeItemListEnd
     \resumeSubheading
       {Technische Universit\"at Berlin}{Berlin, Germany}
       {M.Sc. in Vehicle Engineering}{Sep. 2020 -- Feb. 2025}
@@ -145,13 +148,15 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
-    % Overall ZEKI tenure shown below. Confirm the promotion date before
-    % splitting Working Student and Researcher into separate dated roles.
-    \resumeSubheading
-      {Researcher (previously Working Student)}{May 2026 -- Present}
-      {Center for Tangible Artificial Intelligence and Digitalization (ZEKI)}{Berlin, Germany}
+    \vspace{-2pt}\item
+      \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Researcher (full-time)} & Aug. 2026 -- Present \\
+        \textit{\small Working Student} & \textit{\small May 2026 -- July 2026} \\
+        \textit{\small Center for Tangible Artificial Intelligence and Digitalization (ZEKI)} & \textit{\small Berlin, Germany} \\
+      \end{tabular*}\vspace{-7pt}
       \resumeItemListStart
-        \resumeItem{Develop a full-stack robotics platform on TurtleBot integrating SLAM, navigation, semantic mapping, autonomous exploration, and vision-language models, with an AI agent that interprets user requests into robot actions.}
+        \resumeItem{Lead development of a TurtleBot4 robotics platform integrating SLAM, navigation, autonomous exploration, semantic mapping, and an AI agent that translates user requests into robot actions.}
+        \resumeItem{Implement a distributed onboard architecture, running SLAM and navigation on Raspberry Pi and semantic mapping and the agent system on NVIDIA Jetson Nano.}
         \resumeItem{Develop a multi-robot collaboration system for disaster response, integrating UGVs and UAVs for collaborative mapping and task coordination through a central device.}
       \resumeItemListEnd
 
@@ -161,6 +166,7 @@
       \resumeItemListStart
         \resumeItem{Designed and built an acoustic gripper from scratch, using acoustic signatures to identify grasped objects.}
         \resumeItem{Improved the software pipeline for a Franka manipulator by resolving a persistent impedance-controller bug that caused abnormal oscillations at higher impedance settings.}
+        \resumeItem{Restructured the Franka ROS 2 stack and streamlined Git workflows using submodules, establishing clear package responsibilities and boundaries across drivers, controllers, and robot descriptions to improve maintainability and development efficiency.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -193,13 +199,13 @@
 \section{Achievements and Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{TaoRobot: Autonomous Driving Full Stack}}{June 2026 -- Present}
+          {\textbf{TaoRobot: Autonomous Driving Full Stack} $|$ \href{https://github.com/JinTTTT/taorobot}{Code \& Demo}}{June 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Open-Source Personal Project $|$ \href{https://github.com/JinTTTT/taorobot}{github.com/JinTTTT/taorobot}; demo available in the GitHub repository.}
-            \resumeItem{Independently developing a lightweight autonomous-driving stack from scratch in ROS 2, with custom SLAM, localization, planning, and control algorithms implemented as modular nodes.}
-            \resumeItem{Implemented pose-graph SLAM, particle-filter localization, A* path planning with path smoothing, and pure pursuit trajectory tracking; integrated the stack in Gazebo simulation.}
+            \resumeItem{Sole developer of an open-source ROS 2 autonomy stack, owning architecture, algorithm implementation, and Gazebo simulation integration.}
+            \resumeItem{Implemented pose-graph SLAM, particle-filter localization, A* path planning with path smoothing, and pure pursuit trajectory tracking.}
           \resumeItemListEnd
 
+      \newpage
       \resumeProjectHeading
           {\textbf{Magnetic Joint-State Estimation}}{Mar. 2026 -- Sep. 2026}
           \resumeItemListStart
@@ -218,16 +224,15 @@
       \resumeProjectHeading
           {\textbf{Master's Thesis: Autonomous Shuttle Pedestrian Following}}{Aug. 2024 -- Jan. 2025}
           \resumeItemListStart
-            \resumeItem{Developed and deployed a full-stack pedestrian-following system on a real autonomous shuttle, integrating YOLO-based gesture detection with commands to stop, resume driving, and adjust following distance.}
+            \resumeItem{Developed and deployed a pedestrian-following system on a real autonomous shuttle, integrating A* path planning, pure pursuit trajectory tracking, and cascaded PID control.}
+            \resumeItem{Integrated YOLO-based gesture detection to stop, resume driving, and adjust following distance.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{GPU-Accelerated Visual SLAM and Navigation Integration}}{Mar. 2025 -- Sep. 2025}
           \resumeItemListStart
             \resumeItem{Deployed GPU-accelerated visual SLAM on a Jetson Xavier-based mobile robot and integrated its outputs with Nav2 by projecting 3D map points into a 2D occupancy grid.}
-            % TODO: Confirm whether the utilization changes are relative
-            % percentages or percentage-point changes, and the comparison baseline.
-            \resumeItem{Reduced CPU utilization by 40\% while increasing GPU utilization by 20\%, and improved navigation through faster map--odometry updates and more accurate localization.}
+            \resumeItem{Enabled GPU acceleration for visual SLAM on NVIDIA Jetson Xavier, reducing CPU utilization by 40\% compared with the original CPU-only pipeline.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -235,11 +240,14 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: English (advanced), German (intermediate), Chinese (native)} \\
-     \textbf{Programming and Simulation}{: Python, C/C++, MATLAB/Simulink} \\
-     \textbf{Hardware}{: Arduino, ESP32, Raspberry Pi, NVIDIA Jetson Nano/Xavier; soldering, PCB design and debugging} \\
-     \textbf{Frameworks}{: ROS, TensorFlow, PyTorch, TensorRT, YOLO, LangChain, LangGraph, Ollama, llama.cpp}\\
-     \textbf{Development Tools}{: Git, Docker}
+     \textbf{Programming}{: Python, C/C++, MATLAB/Simulink} \\
+     \textbf{Robotics and Simulation}{: ROS, ROS 2, Nav2, Gazebo} \\
+     \textbf{Computer Vision and Machine Learning}{: YOLO, DINOv3, PyTorch, TensorFlow, TensorRT} \\
+     \textbf{Embedded Systems and Hardware}{: Raspberry Pi, NVIDIA Jetson Nano/Xavier, Arduino, ESP32; soldering, PCB design and debugging} \\
+     \textbf{Development Tools}{: Git, Docker} \\
+     \textbf{Agentic Development}{: Claude Code, Codex; orchestrating coding agents through Git-based workflows, including issues, branches, and pull requests} \\
+     \textbf{AI Tools}{: LangChain, LangGraph, Ollama, llama.cpp} \\
+     \textbf{Languages}{: English (advanced), German (intermediate), Chinese (native)}
     }}
  \end{itemize}
 

@@ -1,0 +1,151 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{microtype}
+% pdfLaTeX Unicode mappings; XeLaTeX handles Unicode directly.
+\ifdefined\pdfglyphtounicode
+  \input{glyphtounicode}
+\fi
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabularx}{0.97\textwidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+      \small#1 & #2 \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[rightmargin=0.15in]\justifying}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Jin Tao} \\ \vspace{1pt}
+    \small \href{mailto:j.tao@campus.tu-berlin.de}{\underline{j.tao@campus.tu-berlin.de}} $|$
+    \href{https://www.linkedin.com/in/jin-tao-89035a289/}{\underline{linkedin.com/in/jin-tao-89035a289}} $|$
+    \href{https://github.com/JinTTTT}{\underline{github.com/JinTTTT}}
+    \\[6pt]
+    {\large Selected Work Samples}
+\end{center}
+
+\section{Home Assistant Robot}
+\noindent\small\textbf{Demo:} \href{https://youtu.be/3TWB9y0iEz0}{\underline{youtu.be/3TWB9y0iEz0}}
+\resumeItemListStart
+    \resumeItem{Lead development of a TurtleBot4 home assistant platform at ZEKI, integrating SLAM, navigation, autonomous exploration, semantic mapping, and an AI agent that translates user requests into robot actions.}
+    \resumeItem{Implement a distributed onboard architecture: Raspberry Pi runs SLAM and navigation; NVIDIA Jetson Nano runs semantic mapping and the agent system.}
+\resumeItemListEnd
+
+\section{TaoRobot: Autonomous Driving Full Stack}
+\noindent\small\textbf{Code and demos:} \href{https://github.com/JinTTTT/taorobot}{\underline{github.com/JinTTTT/taorobot}}
+\resumeItemListStart
+    \resumeItem{Sole developer of an open-source ROS 2 autonomy stack, owning architecture, algorithm implementation, and integration in Gazebo simulation.}
+    \resumeItem{Implemented pose-graph SLAM, particle-filter localization, A* path planning with path smoothing, and pure pursuit trajectory tracking. The repository includes demonstrations of mapping, localization, and goal-directed navigation.}
+\resumeItemListEnd
+
+\section{Magnetic Joint-State Estimation}
+\noindent\small\textbf{Code:} \href{https://github.com/JinTTTT/magnetic_field_simulation_for_rollPitchYaw_estimation}{\underline{GitHub repository: magnetic orientation estimation}}
+\resumeItemListStart
+    \resumeItem{Proposed and developed a ball-joint orientation estimation system using a magnet and two low-cost three-axis magnetic sensors to estimate yaw, pitch, and roll.}
+    \resumeItem{The implementation combines magnetic-field simulation, physical-model calibration, and a lookup-based estimator. Evaluated the system against an Xsens MTi-630 IMU; the magnetic sensors provide the measurements used during normal operation.}
+\resumeItemListEnd
+
+\section{3D Object Pose Estimation with a Single RGB Camera}
+\noindent\small\textbf{Code:} \href{https://github.com/JinTTTT/3d_obj_pose_estimation_with_only_rgb_camera}{\underline{GitHub repository: RGB-only object pose estimation}}
+\resumeItemListStart
+    \resumeItem{Developed an OpenCV-based project for estimating 3D object pose using a single RGB camera.}
+\resumeItemListEnd
+
+\end{document}
